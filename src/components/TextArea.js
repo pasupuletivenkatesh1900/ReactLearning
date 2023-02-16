@@ -13,6 +13,10 @@ export default function TextArea() {
     const handleLowerCase=()=>{
         setText(text.toLowerCase())
     }
+
+    const handleExtraSpaces=()=>{
+        setText(text.replace(/\s+/g, ' ').trim())
+    }
     return (
         <div className='container'>
             <div className="mb-3">
@@ -21,6 +25,9 @@ export default function TextArea() {
             </div>
             <button type="button" onClick={handleUpperCase} class="btn btn-primary">Upper Text</button>
             <button type="button" onClick={handleLowerCase} class="btn btn-primary m-2">Lower Case</button>
+            <button type="button" onClick={handleExtraSpaces} class="btn btn-primary m-2">handleExtraSpaces</button>
+           
+        
         </div>
 
     )
